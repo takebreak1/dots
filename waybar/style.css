@@ -1,0 +1,26 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  color: #e0def4;
+}
+
+window#waybar {
+  background: #191724;
+  border: 2px solid #26233a;
+  margin: 12px 8px;
+  border-radius: 12px;
+}
+
+#clock,
+#network,
+#pulseaudio,
+
+#hyprland-workspaces {
+  background-color: #1f1d2e;
+  padding: 0 10px;
+  margin: 0 6px;
+  border-radius: 12px;
+  font-weight: bold;
+}
