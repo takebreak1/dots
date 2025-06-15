@@ -1,26 +1,49 @@
+
+/* Global style for all modules */
 * {
-  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-family: "Iosevka Nerd Font", sans-serif;
   font-size: 14px;
-  border: none;
-  border-radius: 12px;
-  color: #e0def4;
-}
-
-window#waybar {
+  color: #ebdbb2;
   background: #191724;
-  border: 2px solid #26233a;
-  margin: 12px 8px;
-  border-radius: 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Styling for modules you listed */
 #clock,
 #network,
 #pulseaudio,
-
+#custom-screenshot,
 #hyprland-workspaces {
-  background-color: #1f1d2e;
-  padding: 0 10px;
+  padding: 5px 12px;
   margin: 0 6px;
   border-radius: 12px;
   font-weight: bold;
+  background: #262033;
+}
+
+/* Hover effects */
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-screenshot:hover,
+#hyprland-workspaces:hover {
+  background: #302a40;
+  color: #fff;
+}
+
+#network {
+  color: #83a598;
+}
+
+#pulseaudio {
+  color: #d3869b;
+}
+
+#custom-screenshot {
+  color: #fabd2f;
+}
+
+#hyprland-workspaces {
+  color: #b16286;
 }
