@@ -1,49 +1,70 @@
-
-/* Global style for all modules */
 * {
-  font-family: "Iosevka Nerd Font", sans-serif;
-  font-size: 14px;
+  border: none;
+  font-size: 16px;
+  font-family: "JetBrainsMono Nerd Font,";
+  font-weight: bold;
   color: #ebdbb2;
-  background: #191724;
-  border-radius: 8px;
-  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 20px;
 }
 
-/* Styling for modules you listed */
+window#waybar {
+  background: transparent;
+  margin: 5px;
+}
+
+#workspaces button.active {
+  background-color: #458588; /* blue */
+}
+.modules-right {
+  padding-left: 5px;
+  border-radius: 15px 0 0 15px;
+  margin-top: 2px;
+  background: #3c3836;
+}
+
+.modules-center {
+  padding: 0 15px;
+  margin-top: 2px;
+  border-radius: 15px 15px 15px 15px;
+  background: #3c3836;
+}
+
+.modules-left {
+  border-radius: 0 15px 15px 0;
+  margin-top: 2px;
+  background: #3c3836;
+}
 #clock,
 #network,
+#cpu,
+#memory,
 #pulseaudio,
+#customclipboard,
 #custom-screenshot,
-#hyprland-workspaces {
-  padding: 5px 12px;
-  margin: 0 6px;
-  border-radius: 12px;
-  font-weight: bold;
-  background: #262033;
+#custom-power-menu {
+  padding: 0 10px;
 }
 
-/* Hover effects */
-#clock:hover,
-#network:hover,
-#pulseaudio:hover,
-#custom-screenshot:hover,
-#hyprland-workspaces:hover {
-  background: #302a40;
-  color: #fff;
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#customclipboard,
+#custom-screenshot,
+#custom-power-menu {
+  color: #ebdbb2;
+}
+#pulseaudio.muted {
+  color: #cc241d;
+  padding-top: 0;
+}
+#clock {
+  color: #458588;
 }
 
-#network {
-  color: #83a598;
-}
-
-#pulseaudio {
-  color: #d3869b;
-}
-
-#custom-screenshot {
-  color: #fabd2f;
-}
-
-#hyprland-workspaces {
-  color: #b16286;
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }

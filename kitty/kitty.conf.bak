@@ -1,8 +1,8 @@
-font_family JetBrainsMono Nerd Font 
+font_family JetBrainsMono Nerd Font
 font_size 13
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark
+# Gruvbox Dark Hard
 include current-theme.conf
 # END_KITTY_THEME

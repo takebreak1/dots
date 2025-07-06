@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "cpu", "memory", "pulseaudio","custom/clipboard", "custom/screenshot", "custom/power-menu"],
+  "clock": {
+    "tooltip": true,
+    "format": "{:%H:%M:%S}",
+    "format-alt": "{:%Y-%m-%d}",
+    "interval":1,
+    "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", 
+  },
+ "network": {
+      "format-wifi": " ",
+      "format-ethernet":" ",
+      "format-disconnected": "",
+      "tooltip-format": "{ipaddr}",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+      "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+          },
+  "cpu": {
+    "format": " {usage}%"
+  },
+  "memory": {
+    "format": " {percentage}%"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "Muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": {
+      "headphones": "",
+      "default": ["", ""]
+    }
+  },
+  "custom/screenshot": {
+    "format": " 󰄄 ",
+    "on-click": "bash ~/.config/waybar/scripts/screenshot.sh"
+  },
+  "custom/power-menu": {
+    "format": "⏻",
+    "on-click": "bash ~/.config/waybar/scripts/power-menu.sh"
+  },
+"custom/clipboard":{
+  "format":"  ",
+  "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+  "interval":86400
+},
+  
+}
