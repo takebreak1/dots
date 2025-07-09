@@ -1,134 +1,91 @@
 
-/**
- * Gruvbox rofi theme
- * Adapted by ChatGPT from Nordic theme
- * Gruvbox color palette: https://github.com/morhetz/gruvbox
- */
-
 * {
-    gruvbox0: #282828; /* bg0 */
-    gruvbox1: #3c3836; /* bg1 */
-    gruvbox2: #504945; /* bg2 */
-    gruvbox3: #665c54; /* bg3 */
+    bg0:            #0B0C0C;   /* --background */
+    bg1:            #181D1C;   /* Custom secondary background */
+    fg0:            #b1baba;   /* --foreground */
 
-    gruvbox4: #ebdbb2; /* fg1 */
-    gruvbox5: #ebdbb2; /* fg1 (reused) */
-    gruvbox6: #ebdbb2; /* fg1 (reused) */
+    accent-color:   #A35A73;   /* --color5 */
+    urgent-color:   #A35A73;   /* --color5 */
 
-    gruvbox7: #689d6a; /* aqua */
-    gruvbox8: #458588; /* blue */
-    gruvbox9: #458588; /* blue (reused for primary foreground) */
-    gruvbox10: #b16286; /* purple */
-    gruvbox11: #cc241d; /* red */
-    gruvbox12: #d65d0e; /* orange */
-    gruvbox13: #d79921; /* yellow */
-    gruvbox14: #98971a; /* green */
-    gruvbox15: #b16286; /* purple (reused) */
-
-    foreground: #ebdbb2;
-    backlight: #282828d0;
     background-color: transparent;
-    
-    highlight: underline bold #d79921;
+    text-color:       @fg0;
 
-    transparent: rgba(40,40,40,0);
+    margin:     0;
+    padding:    0;
+    spacing:    0;
 }
 
 window {
     location: center;
-    anchor: center;
-    transparency: "screenshot";
-    padding: 0px;
-    border: 0px;
-    border-radius: 6px;
-    background-color: @transparent;
-    spacing: 0;
-    children: [mainbox];
-    orientation: horizontal;
-}
-
-mainbox {
-    spacing: 0;
-    children: [ inputbar, message, listview ];
-}
-
-message {
-    color: @gruvbox0;
-    padding: 5;
-    border-color: @foreground;
-    border: 0px 2px 2px 2px;
-    background-color: @gruvbox7;
+    height: 320;
+    background-color: @bg0;
 }
 
 inputbar {
-    color: @gruvbox6;
-    padding: 11px;
-    background-color: #3c3836;
-
-    border: 1px;
-    border-radius: 6px 6px 0px 0px;
-    border-color: @gruvbox10;
+    spacing: 4px;
+    padding: 4px;
+    background-color: @bg1;
 }
 
-entry, prompt, case-indicator {
-    text-font: inherit;
-    text-color: inherit;
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
 }
 
 prompt {
-    margin: 0px 1em 0em 0em ;
-}
-
-listview {
-    padding: 8px;
-    border-radius: 0px 0px 6px 6px;
-    border-color: @gruvbox10;
-    border: 0px 1px 1px 1px;
-    background-color: rgba(60,56,54,0.9);
-    dynamic: false;
-}
-
-element {
-    padding: 3px;
-    vertical-align: 0.5;
-    border-radius: 4px;
-    background-color: transparent;
-    color: @foreground;
-    text-color: rgb(235, 219, 178);
-}
-
-element selected.normal {
-    background-color: @gruvbox7;
-    text-color: #282828;
-}
-
-element-text, element-icon {
-    background-color: inherit;
-    text-color: inherit;
-}
-
-button {
-    padding: 6px;
-    color: @foreground;
-    horizontal-align: 0.5;
-
-    border: 2px 0px 2px 2px;
-    border-radius: 4px 0px 0px 4px;
-    border-color: @foreground;
-}
-
-button selected normal {
-    border: 2px 0px 2px 2px;
-    border-color: @foreground;
+    text-color: @accent-color;
 }
 
 textbox {
-    padding: 8px;
-    border-radius: 6px;
-    border-color: @gruvbox10;
-    border: 1px 1px 1px 1px;
-    background-color: rgba(60,56,54,0.9);
-    dynamic: true;
-    text-color: @backlight;
+    padding:          4px;
+    background-color: @bg1;
+}
+
+listview {
+    padding:  4px 0;
+    lines:    8;
+    columns:  1;
+    fixed-height: false;
+}
+
+element {
+    padding: 4px;
+    spacing: 4px;
+}
+
+element normal normal {
+    text-color: @fg0;
+}
+
+element normal urgent {
+    text-color: @urgent-color;
+}
+
+element normal active {
+    text-color: @accent-color;
+}
+
+element alternate active {
+    text-color: @accent-color;
+}
+
+element selected {
+    text-color: @bg0;
+}
+
+element selected normal,
+element selected active {
+    background-color: @accent-color;
+}
+
+element selected urgent {
+    background-color: @accent-color;
+}
+
+element-icon {
+    size: 0.8em;
+}
+
+element-text {
+    text-color: inherit;
 }
 

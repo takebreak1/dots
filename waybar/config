@@ -1,4 +1,6 @@
 {
+
+"style": "~/.config/waybar/style.css",
   "layer": "top",
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
@@ -12,38 +14,34 @@
     "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", 
   },
  "network": {
-      "format-wifi": " ",
-      "format-ethernet":" ",
-      "format-disconnected": "",
+      "format-wifi": "WIFI",
+      "format-ethernet":"ETH",
+      "format-disconnected": "DISCONNECTED",
       "tooltip-format": "{ipaddr}",
       "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
-      "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+      "tooltip-format-ethernet": "{ifname} | {ipaddr}",
           },
   "cpu": {
-    "format": " {usage}%"
+    "format": "CPU {usage}%"
   },
   "memory": {
-    "format": " {percentage}%"
+    "format": "RAM {percentage}%"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "Muted",
+    "format": "VOL {volume}%",
+    "format-muted": "MUTED",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "format-icons": {
-      "headphones": "",
-      "default": ["", ""]
-    }
   },
   "custom/screenshot": {
-    "format": " 󰄄 ",
+    "format": "SS",
     "on-click": "bash ~/.config/waybar/scripts/screenshot.sh"
   },
   "custom/power-menu": {
-    "format": "⏻",
+    "format": "POW",
     "on-click": "bash ~/.config/waybar/scripts/power-menu.sh"
   },
 "custom/clipboard":{
-  "format":"  ",
+  "format":"CLIP",
   "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
   "interval":86400
 },

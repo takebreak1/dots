@@ -1,17 +1,12 @@
 configuration {
-    font: "Inter 12";
-    line-margin: 10;
-    show-icons:     true;
+    show-icons:true;
+    icon-theme:"kora-grey";
+    font:"JetBrainsMono Nerd Font 12";
 }
-
-
 @theme "~/.config/rofi/gruvbox.rasi"
 
 listview {
-	lines: 5;
+	lines: 7;
 	columns:1;
 }
 
-window {
-	width: 33%;
-}

@@ -1,70 +1,57 @@
 * {
-  border: none;
   font-size: 16px;
-  font-family: "JetBrainsMono Nerd Font,";
+  font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
-  color: #ebdbb2;
-  min-height: 20px;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 window#waybar {
-  background: transparent;
-  margin: 5px;
+  background-color: #0b0c0c; /* --background */
+}
+
+#workspaces button {
+  transition: background 0.2s ease;
+  padding: 5px 5px;
+  background-color: #0b0c0c; /* --color0 */
+  color: #b1baba; /* --foreground */
 }
 
 #workspaces button.active {
-  background-color: #458588; /* blue */
-}
-.modules-right {
-  padding-left: 5px;
-  border-radius: 15px 0 0 15px;
-  margin-top: 2px;
-  background: #3c3836;
+  background-color: #a35a73; /* --color5 */
+  color: #b1baba;
 }
 
-.modules-center {
-  padding: 0 15px;
-  margin-top: 2px;
-  border-radius: 15px 15px 15px 15px;
-  background: #3c3836;
-}
-
-.modules-left {
-  border-radius: 0 15px 15px 0;
-  margin-top: 2px;
-  background: #3c3836;
-}
 #clock,
 #network,
 #cpu,
 #memory,
 #pulseaudio,
-#customclipboard,
+#custom-clipboard,
+#hyprland-workspaces,
 #custom-screenshot,
 #custom-power-menu {
-  padding: 0 10px;
+  padding: 0px 7px;
+  color: #b1baba;
 }
 
-#clock,
-#cpu,
-#memory,
-#pulseaudio,
-#customclipboard,
-#custom-screenshot,
-#custom-power-menu {
-  color: #ebdbb2;
-}
 #pulseaudio.muted {
-  color: #cc241d;
-  padding-top: 0;
-}
-#clock {
-  color: #458588;
+  color: #a35a73;
 }
 
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
+#network {
+  color: #576468;
+}
+
+#network.disconnected {
+  color: #a35a73;
+}
+
+#clock {
+  color: #b76d89;
+}
+
+#custom-power-menu {
+  color: #576468;
 }
